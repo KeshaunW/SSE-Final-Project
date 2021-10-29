@@ -14,8 +14,10 @@ public class BranchDaoTest {
 
     @Test
     public void testRead() throws SQLException {
-        assertNull(dao.getBranch(51));
-        assertEquals(dao.getBranch(1).toString(), branch1.toString());
-        assertEquals(dao.getBranches().size(), 50);
+        assertNull(dao.getSingle(51));
+        assertNotNull(dao.getSingle(1));
+        assertEquals(dao.getSingle(1).toString(), branch1.toString());
+        assertEquals(dao.getAll().size(), 50);
+        assertNotEquals(dao.getSingle(1).getBranchId(), 0);
     }
 }
