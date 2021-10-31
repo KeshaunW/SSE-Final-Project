@@ -22,7 +22,7 @@ public class LibrarianMenu {
     private final static BookCopyDao copyDao = new BookCopyDao();
 
     public static void mainMenu() throws SQLException {
-        System.out.println("Welcome, Librarian. Please select an option:\n");
+        System.out.println("Welcome, Librarian. Please select an option below:\n");
 
         System.out.println("1) Enter Your Branch");
         System.out.println("2) Return to Previous Menu\n");
