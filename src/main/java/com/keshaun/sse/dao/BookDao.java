@@ -65,4 +65,9 @@ public class BookDao implements Dao<Book> {
         prepared.setInt(1, id);
         prepared.executeUpdate();
     }
+
+    @Override
+    public void delete(Book book) throws SQLException {
+        delete(book.getBookId());
+    }
 }

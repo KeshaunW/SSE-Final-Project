@@ -11,7 +11,7 @@ public class Main {
         System.out.println("1) Librarian");
         System.out.println("2) Administrator");
         System.out.println("3) Borrower");
-        System.out.println("4) Quit LMS");
+        System.out.println("4) Quit LMS\n");
 
         int user = Input.getInt(1, 4);
         System.out.println();

@@ -127,4 +127,8 @@ public class BookLoanDao implements Dao<BookLoan> {
         prepared.setInt(3, cardNo);
         prepared.executeUpdate();
     }
+
+    public void delete(BookLoan bookLoan) throws SQLException {
+        delete(bookLoan.getBookId(), bookLoan.getBranchId(), bookLoan.getCardNo());
+    }
 }

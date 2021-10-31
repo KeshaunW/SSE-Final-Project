@@ -67,4 +67,9 @@ public class BorrowerDao implements Dao<Borrower> {
         prepared.setInt(1, id);
         prepared.executeUpdate();
     }
+
+    @Override
+    public void delete(Borrower borrower) throws SQLException {
+        delete(borrower.getCardNo());
+    }
 }

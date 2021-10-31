@@ -60,4 +60,9 @@ public class AuthorDao implements Dao<Author> {
         prepared.setInt(1, id);
         prepared.executeUpdate();
     }
+
+    @Override
+    public void delete(Author author) throws SQLException {
+        delete(author.getAuthorId());
+    }
 }

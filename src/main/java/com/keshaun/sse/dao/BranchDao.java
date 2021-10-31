@@ -60,4 +60,9 @@ public class BranchDao implements Dao<Branch> {
         prepared.setInt(1, id);
         prepared.executeUpdate();
     }
+
+    @Override
+    public void delete(Branch branch) throws SQLException {
+        delete(branch.getBranchId());
+    }
 }

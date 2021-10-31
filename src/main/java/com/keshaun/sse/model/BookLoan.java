@@ -21,6 +21,14 @@ public class BookLoan {
         this.dueDate = dueDate.toLocalDateTime();
     }
 
+    public BookLoan(int bookId, int branchId, int cardNo, LocalDateTime dateOut, LocalDateTime dueDate) {
+        this.bookId = bookId;
+        this.branchId = branchId;
+        this.cardNo = cardNo;
+        this.dateOut = dateOut;
+        this.dueDate = dueDate;
+    }
+
     public int getBookId() {
         return bookId;
     }

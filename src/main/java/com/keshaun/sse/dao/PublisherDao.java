@@ -64,4 +64,9 @@ public class PublisherDao implements Dao<Publisher> {
         prepared.setInt(1, id);
         prepared.executeUpdate();
     }
+
+    @Override
+    public void delete(Publisher publisher) throws SQLException {
+        delete(publisher.getPublisherId());
+    }
 }

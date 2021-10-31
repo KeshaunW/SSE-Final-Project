@@ -90,4 +90,9 @@ public class BookCopyDao implements Dao<BookCopy> {
         prepared.setInt(2, branch);
         prepared.executeUpdate();
     }
+
+    @Override
+    public void delete(BookCopy bookCopy) throws SQLException {
+        delete(bookCopy.getBookId(), bookCopy.getBranchId());
+    }
 }
