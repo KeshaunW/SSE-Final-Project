@@ -19,4 +19,8 @@ public class Input {
     public static String getString() {
         return in.nextLine();
     }
+
+    public static int getCardNo() {
+        return in.nextInt();
+    }
 }

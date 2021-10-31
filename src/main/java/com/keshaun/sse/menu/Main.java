@@ -10,15 +10,17 @@ public class Main {
 
         System.out.println("1) Librarian");
         System.out.println("2) Administrator");
-        System.out.println("3) Borrower\n");
+        System.out.println("3) Borrower");
+        System.out.println("4) Quit LMS");
 
-        int user = Input.getInt(1, 3);
+        int user = Input.getInt(1, 4);
         System.out.println();
 
         switch(user) {
             case 1 -> LibrarianMenu.mainMenu();
             case 2 -> AdminMenu.mainMenu();
-            default -> BorrowerMenu.mainMenu();
+            case 3 -> BorrowerMenu.mainMenu();
+            default -> System.exit(0);
         }
     }
 

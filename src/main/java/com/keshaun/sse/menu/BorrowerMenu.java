@@ -14,7 +14,7 @@ public class BorrowerMenu {
         Borrower borrower = null;
 
         while (borrower == null) {
-            int cardNo = Input.getInt(1,100000);
+            int cardNo = Input.getCardNo();
             Borrower temp = borrowerDao.getSingle(cardNo);
             if (temp == null)
                 System.out.println("The provided Card Number is not in the system. Please try again.");
