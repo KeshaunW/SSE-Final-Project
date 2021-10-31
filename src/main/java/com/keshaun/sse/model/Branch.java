@@ -37,6 +37,6 @@ public class Branch {
     }
 
     public String toString() {
-        return branchName + " (" + branchAddress + ")";
+        return branchName + ", " + branchAddress;
     }
 }

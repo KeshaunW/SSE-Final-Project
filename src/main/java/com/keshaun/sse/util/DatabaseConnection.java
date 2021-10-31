@@ -1,5 +1,7 @@
 package com.keshaun.sse.util;
 
+import io.github.cdimascio.dotenv.Dotenv;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -9,13 +11,11 @@ public class DatabaseConnection {
     private Connection connection;
 
     private DatabaseConnection() {
-        String url = "jdbc:mysql:// localhost:3306/library";
-        String user = "root";
-        String pass = "Kdway123!";
+        Dotenv env = Dotenv.load();
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, user, pass);
+            connection = DriverManager.getConnection(env.get("MYSQL_URL"), env.get("MYSQL_USER"), env.get("MYSQL_PASS"));
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
