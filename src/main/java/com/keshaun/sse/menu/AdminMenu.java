@@ -17,6 +17,7 @@ public class AdminMenu {
         System.out.println("7) Return to Previous Menu\n");
 
         int option = Input.getInt(1, 7);
+        System.out.println();
 
         switch (option) {
             case 1 -> BookCRUDMenu.mainMenu();
